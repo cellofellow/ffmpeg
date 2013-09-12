@@ -1,5 +1,5 @@
-Docker.io Image Build for FFMPEG from Source
-============================================
+FFMPEG for Docker
+=================
 
 This repo has a Dockerfile to create a Docker image wth FFMPEG. It compiles
 FFMPEG from sources following instructions from the
