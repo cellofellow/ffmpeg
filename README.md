@@ -3,7 +3,7 @@ FFMPEG for Docker
 
 This repo has a Dockerfile to create a Docker image wth FFMPEG. It compiles
 FFMPEG from sources following instructions from the
-[Ubuntu Compilation Guide]http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide.
+[Ubuntu Compilation Guide](http://ffmpeg.org/trac/ffmpeg/wiki/UbuntuCompilationGuide).
 
 You can install the latest build of this image by running
 `docker pull cellofellow/ffmpeg`.
