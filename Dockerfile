@@ -8,7 +8,7 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
 
 # Fetch Sources
 
-RUN cd /usr/local/src; git clone --depth 1 git://git.videolan.org/x264.git; git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git; git clone --depth 1 http://git.chromium.org/webm/libvpx.git; git clone --depth 1 git://source.ffmpeg.org/ffmpeg; wget http://downloads.xiph.org/releases/opus/opus-1.0.3.tar.gz; wget http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz;
+RUN cd /usr/local/src; git clone --depth 1 git://git.videolan.org/x264.git; git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git; git clone --depth 1 https://chromium.googlesource.com/webm/libvpx; git clone --depth 1 git://source.ffmpeg.org/ffmpeg; wget http://downloads.xiph.org/releases/opus/opus-1.0.3.tar.gz; wget http://www.tortall.net/projects/yasm/releases/yasm-1.2.0.tar.gz;
 
 # Build YASM assembler.
 
