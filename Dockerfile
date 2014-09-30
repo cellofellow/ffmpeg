@@ -1,10 +1,10 @@
-FROM ubuntu:12.04
+FROM ubuntu:trusty
 
 MAINTAINER Joshua Gardner mellowcellofellow@gmail.com
 
 # Enable Universe and Multiverse and install dependencies.
 
-RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /etc/apt/sources.list; apt-get update; apt-get -y install autoconf automake build-essential git libass-dev libgpac-dev libtheora-dev libtool libvdpau-dev libvorbis-dev pkg-config texi2html zlib1g-dev libmp3lame-dev wget; apt-get clean
+RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /etc/apt/sources.list; apt-get update; apt-get -y install autoconf automake build-essential git libass-dev libgpac-dev libtheora-dev libtool libvdpau-dev libvorbis-dev pkg-config texi2html zlib1g-dev libmp3lame-dev wget yasm; apt-get clean
 
 # Fetch Sources
 
@@ -13,11 +13,6 @@ RUN cd /usr/local/src; git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git
 RUN cd /usr/local/src; git clone --depth 1 https://chromium.googlesource.com/webm/libvpx
 RUN cd /usr/local/src; git clone --depth 1 git://source.ffmpeg.org/ffmpeg
 RUN cd /usr/local/src; wget http://downloads.xiph.org/releases/opus/opus-1.1.tar.gz
-RUN cd /usr/local/src; wget http://www.tortall.net/projects/yasm/releases/yasm-1.3.0.tar.gz;
-
-# Build YASM assembler.
-
-RUN cd /usr/local/src; tar xzvf yasm-1.3.0.tar.gz; cd yasm-1.3.0; ./configure; make -j 4; make install; make distclean;
 
 # Build libx264
 
