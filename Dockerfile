@@ -45,3 +45,5 @@ RUN cd /usr/local/src; tar zxvf opus-1.1.tar.gz; cd opus-1.1; ./configure --disa
 # Build ffmpeg.
 
 RUN cd /usr/local/src/ffmpeg; ./configure --extra-libs="-ldl" --enable-gpl --enable-libass --enable-libfdk-aac --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-nonfree; make -j 4; make install; make distclean; hash -r
+
+CMD ["/bin/bash"]
