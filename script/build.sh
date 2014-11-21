@@ -9,7 +9,7 @@ hg clone https://bitbucket.org/multicoreware/x265
 git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git
 git clone --depth 1 https://chromium.googlesource.com/webm/libvpx
 git clone --depth 1 git://source.ffmpeg.org/ffmpeg
-wget http://downloads.xiph.org/releases/opus/opus-1.1.tar.gz
+git clone --depth 1 git://git.opus-codec.org/opus.git
 git clone --depth 1 https://github.com/mulx/aacgain.git
 
 # Build libx264
@@ -43,9 +43,8 @@ make install
 
 # Build libopus
 
-cd /usr/local/src
-tar zxvf opus-1.1.tar.gz
-cd opus-1.1
+cd /usr/local/src/opus
+./autogen.sh
 ./configure --disable-shared
 make -j 4
 make install
