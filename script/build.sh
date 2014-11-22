@@ -4,6 +4,7 @@
 
 cd /usr/local/src
 
+git clone --depth 1 https://github.com/l-smash/l-smash
 git clone --depth 1 git://git.videolan.org/x264.git
 hg clone https://bitbucket.org/multicoreware/x265
 git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git
@@ -11,6 +12,13 @@ git clone --depth 1 https://chromium.googlesource.com/webm/libvpx
 git clone --depth 1 git://source.ffmpeg.org/ffmpeg
 git clone --depth 1 git://git.opus-codec.org/opus.git
 git clone --depth 1 https://github.com/mulx/aacgain.git
+
+# Build L-SMASH
+
+cd /usr/local/src/l-smash
+./configure
+make -j 4
+make install
 
 # Build libx264
 
