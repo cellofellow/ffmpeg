@@ -1,6 +1,6 @@
 FROM ubuntu:trusty
 
-MAINTAINER ACUVE sub_chon@yahoo.co.jp
+MAINTAINER Joshua Gardner mellowcellofellow@gmail.com
 
 # Set Locale
 
