@@ -17,7 +17,7 @@ git clone --depth 1 https://github.com/mulx/aacgain.git
 
 cd /usr/local/src/l-smash
 ./configure
-make -j 8
+make -j $(nproc)
 make install
 
 # Build libx264
