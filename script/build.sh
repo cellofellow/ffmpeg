@@ -2,6 +2,7 @@
 
 # Fetch Sources
 
+mkdir -p /usr/local/src
 cd /usr/local/src
 
 git clone --depth 1 https://github.com/l-smash/l-smash
