@@ -20,4 +20,4 @@ RUN echo deb http://archive.ubuntu.com/ubuntu precise universe multiverse >> /et
 ADD script/build.sh /build.sh
 RUN ["/bin/bash", "/build.sh"]
 
-ENTRYPOINT ["ffmpeg"]
+CMD ["/bin/bash"]
