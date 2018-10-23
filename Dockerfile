@@ -1,7 +1,7 @@
 FROM debian:stable
 MAINTAINER Joshua Gardner mellowcellofellow@gmail.com
 
-RRUN apt-get update && \
+RUN apt-get update && \
     apt-get -qqy install --no-install-recommends \
         autoconf \
         automake \
