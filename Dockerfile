@@ -1,7 +1,7 @@
 FROM debian:stable
 MAINTAINER Joshua Gardner mellowcellofellow@gmail.com
 
-RUN apt-get update && \
+RRUN apt-get update && \
     apt-get -qqy install --no-install-recommends \
         autoconf \
         automake \
@@ -16,6 +16,7 @@ RUN apt-get update && \
         libtool \
         libvdpau-dev \
         libvorbis-dev \
+        libopus-dev \
         pkg-config \
         texi2html \
         zlib1g-dev \
