@@ -13,7 +13,16 @@ git clone --depth 1 git://github.com/mstorsjo/fdk-aac.git
 git clone --depth 1 https://chromium.googlesource.com/webm/libvpx
 git clone --depth 1 git://source.ffmpeg.org/ffmpeg
 git clone https://git.xiph.org/opus.git
-git clone --depth 1 https://github.com/mulx/aacgain.git
+git clone --depth 1 https://gitlab.com/mulx/aacgain.git
+
+
+wget http://www.nasm.us/pub/nasm/releasebuilds/2.13.01/nasm-2.13.01.tar.xz
+tar -xvf nasm-2.13.01.tar.xz
+cd nasm-2.13.01
+./configure
+make
+make install
+
 
 # Build L-SMASH
 
@@ -25,7 +34,7 @@ make install
 # Build libx264
 
 cd /usr/local/src/x264
-./configure --enable-static
+./configure --enable-static --enable-pic --enable-shared
 make -j $(nproc)
 make install
 
@@ -62,7 +71,7 @@ make install
 # Build ffmpeg.
 
 cd /usr/local/src/ffmpeg
-./configure --extra-libs="-ldl" --enable-gpl --enable-libass --enable-libfdk-aac --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-nonfree
+./configure --extra-libs="-ldl" --enable-gpl --enable-libass --enable-libfdk-aac --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-nonfree --pkg-config-flags="--static"
 make -j $(nproc)
 make install
 
