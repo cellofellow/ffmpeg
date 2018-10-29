@@ -16,6 +16,7 @@ RUN apt-get update && \
         libtool \
         libvdpau-dev \
         libvorbis-dev \
+        libopus-dev \
         pkg-config \
         texi2html \
         zlib1g-dev \
